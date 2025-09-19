@@ -1,6 +1,7 @@
 // Helper to load sections into the main page
 const sections = [
   "navbar",
+  "about",
   "main",
   "skills",
   "projects",
@@ -25,7 +26,7 @@ Promise.all(loadPromises).then(() => {
 function setupSmoothScrolling() {
   // Get navbar height for offset calculation
   const navbar = document.getElementById("navbar");
-  const navbarHeight = navbar.offsetHeight + 40; // Add some extra padding
+  const navbarHeight = navbar.offsetHeight + 70; // Add some extra padding
 
   // Add click event listeners to all navigation links
   const navLinks = document.querySelectorAll(".nav-link");
@@ -50,3 +51,17 @@ function setupSmoothScrolling() {
     });
   });
 }
+
+// Toggle glass effect on navbar when scrolled
+document.addEventListener("DOMContentLoaded", function () {
+  const navbar = document.getElementById("navbar");
+  function updateNavbarGlass() {
+    if (window.scrollY > 10) {
+      navbar.classList.add("glass");
+    } else {
+      navbar.classList.remove("glass");
+    }
+  }
+  window.addEventListener("scroll", updateNavbarGlass);
+  updateNavbarGlass(); // Initial check
+});

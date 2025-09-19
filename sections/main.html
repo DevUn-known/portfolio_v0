@@ -10,13 +10,37 @@
     </div>
     <div class="intro-right">
       <div class="image-container">
-        <img src="../assets/nbProfile.png" alt="Profile" class="intro-image" />
+        <img src="assets/nbProfile.png" alt="Profile" class="intro-image" />
       </div>
     </div>
   </div>
 </section>
 
 <style>
+  .intro-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2.5rem;
+  }
+
+  .intro-left {
+    flex: 1 1 0;
+    text-align: left;
+  }
+
+  .intro-right {
+    flex: 0 0 220px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .intro-right .image-container {
+    box-shadow: 0 0 5px 2px #38bdf866;
+  }
+
   .image-container {
     width: 220px;
     height: 220px;
@@ -32,5 +56,23 @@
     height: 300px;
     object-fit: cover;
     object-position: center;
+    border-radius: 50%;
+    box-shadow: 0 4px 24px rgba(56, 189, 248, 0.15);
+    background: #18181b;
+  }
+
+  @media (max-width: 900px) {
+    .intro-container {
+      flex-direction: column-reverse;
+      gap: 1.5rem;
+      align-items: center;
+      text-align: center;
+    }
+    .intro-left {
+      text-align: center;
+    }
+    .intro-right {
+      margin-bottom: 1rem;
+    }
   }
 </style>
