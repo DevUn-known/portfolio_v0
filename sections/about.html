@@ -1,14 +1,117 @@
 <section id="about-section">
-  <h2>About me</h2>
-  <!-- Socials (linkedin, github etc...) -->
-  <p>
-    Hello! I'm [Your Name], a [Your Profession] with a passion for [Your
-    Interests]. I specialize in [Your Specializations] and love to create
-    innovative solutions that make a difference.
-  </p>
-  <p>
-    When I'm not working, you can find me [Your Hobbies or Interests]. I'm
-    always eager to connect with like-minded individuals, so feel free to reach
-    out!
-  </p>
+  <h2>
+    <span class="about-dot"></span>
+    About Me
+  </h2>
+  <div class="about-content">
+    <p class="about-intro">
+      Hi, I’m <span class="about-name">Anwin</span>, a computer science student
+      and full-stack developer who loves building things with a lot of moving
+      parts and seeing them come to life.
+    </p>
+    <p>
+      I love exploring different technologies, from
+      <span class="about-tech">React</span>,
+      <span class="about-tech">Express</span> and
+      <span class="about-tech">FastAPI</span> to
+      <span class="about-tech">LLMs</span> and other AI tools, and using them to
+      build apps that solve real problems.
+    </p>
+    <p>
+      Competitive coding is my hobby, and I believe anyone can learn to code.
+      I’ve organized programming workshops for 60+ students, helping them build
+      confidence as problem solvers.
+    </p>
+    <p>
+      I’ve joined multiple hackathons and completed a frontend internship, which
+      taught me how to collaborate, ship quickly, and improve with every
+      project.
+    </p>
+    <p>
+      I’m curious about <span class="about-interest">agentic systems</span>,
+      <span class="about-interest">security engineering</span>, and
+      <span class="about-interest">scalable solutions</span>. I’m always looking
+      for opportunities to grow and share what I learn.
+    </p>
+  </div>
 </section>
+
+<style>
+  #about-section {
+    /* Uses section width and padding from main CSS */
+  }
+  #about-section h2 {
+    font-size: 2.2rem;
+    font-weight: 600;
+    color: #38bdf8;
+    display: flex;
+    align-items: center;
+    margin-bottom: 1.5rem;
+    position: relative;
+    padding-bottom: 0.5rem;
+    letter-spacing: 0.02em;
+  }
+  #about-section h2::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 60px;
+    height: 3px;
+    background: #38bdf8;
+    border-radius: 2px;
+  }
+  .about-dot {
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background: #38bdf8;
+    display: inline-block;
+    margin-right: 0.7em;
+    box-shadow: 0 0 8px #38bdf8aa;
+  }
+  .about-content {
+    background: #18181b;
+    border-radius: 14px;
+    box-shadow: 0 2px 12px rgba(56, 189, 248, 0.08);
+    padding: 2rem 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.1rem;
+  }
+  .about-intro {
+    font-size: 1.15rem;
+    font-weight: 500;
+    color: #e5e7eb;
+    margin-bottom: 0.5rem;
+  }
+  .about-name {
+    color: #38bdf8;
+    font-weight: 700;
+    letter-spacing: 0.03em;
+  }
+  .about-tech {
+    background: #23232a;
+    color: #38bdf8;
+    padding: 0.15em 0.5em;
+    border-radius: 8px;
+    font-size: 0.98em;
+    font-weight: 600;
+    margin: 0 0.1em;
+    box-shadow: 0 1px 6px rgba(56, 189, 248, 0.08);
+  }
+  .about-interest {
+    color: #60a5fa;
+    font-weight: 600;
+    font-style: italic;
+    margin-right: 0.2em;
+  }
+  @media (max-width: 900px) {
+    .about-content {
+      padding: 1.2rem 0.5rem;
+    }
+    #about-section h2 {
+      font-size: 1.8rem;
+    }
+  }
+</style>

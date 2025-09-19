@@ -29,7 +29,10 @@ function setupSmoothScrolling() {
   const navbarHeight = navbar.offsetHeight + 70; // Add some extra padding
 
   // Add click event listeners to all navigation links
-  const navLinks = document.querySelectorAll(".nav-link");
+  const navLinks = [
+    ...document.querySelectorAll(".nav-link"),
+    ...document.querySelectorAll(".cta-btn"),
+  ];
 
   navLinks.forEach((link) => {
     link.addEventListener("click", function (e) {

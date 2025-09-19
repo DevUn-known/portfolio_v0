@@ -1,12 +1,24 @@
 <section id="intro">
   <div class="intro-container">
     <div class="intro-left">
+      <div class="intro-subtitle">
+        <span class="blue-dot"></span>
+        Full-Stack AI Developer
+        <span class="blinking-underscore">_</span>
+      </div>
       <h1>Hey, I'm Anwin Jayan</h1>
       <p>
-        Welcome to my portfolio website. I'm a Full Stack AI Developer and I
-        love building innovative solutions that leverage the power of AI to
-        solve real-world problems.
+        I love building smart, user-friendly apps that solve real problems and
+        bring ideas to life
       </p>
+      <div class="cta-btn-group">
+        <a href="#projects-section" class="cta-btn cta-primary"
+          >See my projects</a
+        >
+        <a href="#contact-section" class="cta-btn cta-secondary"
+          >Get in touch</a
+        >
+      </div>
     </div>
     <div class="intro-right">
       <div class="image-container">
@@ -61,6 +73,83 @@
     background: #18181b;
   }
 
+  .intro-subtitle {
+    display: flex;
+    align-items: center;
+    font-size: 1.2rem;
+    font-weight: 500;
+    margin-bottom: 0.7rem;
+    color: #38bdf8;
+    letter-spacing: 0.02em;
+  }
+
+  .blue-dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: #38bdf8;
+    display: inline-block;
+    margin-right: 0.7em;
+  }
+
+  .blinking-underscore {
+    margin-left: 0.2em;
+    animation: blink 1s steps(2, start) infinite;
+    font-weight: 700;
+    color: #38bdf8;
+  }
+
+  .cta-btn-group {
+    display: flex;
+    gap: 1rem;
+    margin-top: 2rem;
+  }
+
+  .cta-btn {
+    display: inline-block;
+    padding: 0.4rem 1.2rem;
+    border-radius: 12px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    text-decoration: none;
+    transition: background 0.3s, color 0.3s, box-shadow 0.3s, border 0.3s;
+    cursor: pointer;
+    box-shadow: 0 4px 24px rgba(56, 189, 248, 0.12);
+  }
+
+  .cta-primary {
+    background: #38bdf8;
+    color: #18181b;
+    border: none;
+  }
+  .cta-primary:hover {
+    background: #23232a;
+    color: #38bdf8;
+    box-shadow: 0 10px 30px rgba(56, 189, 248, 0.18);
+  }
+
+  .cta-secondary {
+    background: transparent;
+    color: #38bdf8;
+    border: 2px solid #38bdf8;
+  }
+  .cta-secondary:hover {
+    background: #38bdf8;
+    color: #18181b;
+    box-shadow: 0 10px 30px rgba(56, 189, 248, 0.18);
+  }
+
+  @keyframes blink {
+    0%,
+    50% {
+      opacity: 1;
+    }
+    51%,
+    100% {
+      opacity: 0;
+    }
+  }
+
   @media (max-width: 900px) {
     .intro-container {
       flex-direction: column-reverse;
@@ -73,6 +162,10 @@
     }
     .intro-right {
       margin-bottom: 1rem;
+    }
+    .intro-subtitle {
+      justify-content: center;
+      align-items: center;
     }
   }
 </style>
