@@ -1,0 +1,4 @@
+{
+  "chat.checkpoints.enabled": false,
+  "chat.checkpoints.showFileChanges": true
+}
