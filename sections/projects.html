@@ -1,4 +1,108 @@
 <section id="projects-section">
   <h2>Projects</h2>
-  <p>Showcase your best work here. Add project cards or links as you build.</p>
+  <div id="projects-cards" class="projects-cards"></div>
 </section>
+<!--  -->
+<style>
+  .projects-cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    margin-top: 2rem;
+    justify-content: flex-start;
+    align-items: stretch;
+  }
+  .project-card {
+    background: #18181b;
+    color: #fff;
+    border-radius: 18px;
+    box-shadow: 0 4px 24px rgba(56, 189, 248, 0.12);
+    padding: 1.5rem;
+    width: 320px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    transition: transform 0.2s, box-shadow 0.2s;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+  }
+  .project-image-container {
+    width: 100%;
+    height: 160px;
+    overflow: hidden;
+    border-radius: 12px;
+    margin-bottom: 1.1rem;
+    background: #23232a;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .project-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    display: block;
+  }
+  .project-card:hover .project-image {
+    transform: scale(1.12);
+  }
+  .project-title {
+    font-size: 1.3rem;
+    font-weight: 700;
+    margin-bottom: 0.6rem;
+    color: #38bdf8;
+  }
+  .project-stack {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+    margin-top: 0.2rem;
+  }
+  .project-tech {
+    background: #23232a;
+    color: #38bdf8;
+    font-size: 0.92rem;
+    padding: 0.22em 0.8em;
+    border-radius: 8px;
+    font-weight: 500;
+    letter-spacing: 0.01em;
+    border: 1px solid #38bdf8;
+    box-shadow: 0 1px 4px rgba(56, 189, 248, 0.08);
+    margin-bottom: 0.1em;
+    margin-right: 0.1em;
+    white-space: nowrap;
+  }
+  .project-desc {
+    font-size: 1.05rem;
+    margin-bottom: 1.2rem;
+    color: #e5e7eb;
+  }
+  .project-link {
+    display: inline-block;
+    padding: 0.4rem 1.1rem;
+    border-radius: 10px;
+    background: #38bdf8;
+    color: #18181b;
+    font-weight: 600;
+    text-decoration: none;
+    transition: background 0.3s, color 0.3s;
+    margin-top: auto;
+  }
+  .project-link:hover {
+    background: #23232a;
+    color: #38bdf8;
+  }
+  @media (max-width: 900px) {
+    .projects-cards {
+      gap: 1.2rem;
+      justify-content: center;
+    }
+    .project-card {
+      width: 90vw;
+      max-width: 340px;
+    }
+  }
+</style>
